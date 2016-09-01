@@ -71,7 +71,7 @@ class Configurable(HasTraits):
         config = kwargs.pop('config', None)
         
         # load kwarg traits, other than config
-        super(Configurable, self).__init__(**kwargs)
+        super(Configurable, self).__init__(**dict(kwargs))
         
         # load config
         if config is not None:
